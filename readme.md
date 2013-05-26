@@ -1,5 +1,7 @@
 # Possession
 
+v0.1.0
+
 Possession is collection of a CSS files including a version of normalize and a collection of core objects to build great websites upon.
 
 ## Browser Support
