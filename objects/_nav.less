@@ -1,0 +1,21 @@
+/*  --  base/_nav.less  --  */
+
+//
+//  The ‘nav’ abstraction - CSS Wizardry
+//  http://csswizardry.com/2011/09/the-nav-abstraction/
+//
+//  ul.nav>li*X>a
+//
+
+.nav {
+    list-style: none;
+    margin-left: 0;
+
+    > li{
+
+        &,
+        > a{
+            display: inline-block;
+        }
+    }
+}
