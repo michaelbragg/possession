@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          'global.css': ['global.less']
+          'test/global.css': ['global.less']
         }
       }
     }
@@ -19,13 +19,26 @@ module.exports = function(grunt) {
         ,"universal-selector": false
       }
       ,files: {
-        src: ['global.css']
+        src: ['test/global.css']
+      }
+    }
+
+   ,express: {
+      server: {
+        options: {
+          port: 3000
+         ,hostname: 'localhost'
+         ,bases: 'test'
+        }
       }
     }
 
     ,watch: {
       files: ['/**/*.less']
      ,tasks: ['serve']
+     ,options: {
+        livereload: 3000
+      }
     }
 
   });
@@ -33,8 +46,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-csslint');
+  grunt.loadNpmTasks('grunt-express');
 
-  grunt.registerTask('default', ['serve']);
+  grunt.registerTask('default', ['serve', 'express', 'watch']);
   grunt.registerTask('ci-server', ['csslint']);
   grunt.registerTask('serve', ['less']);
 
