@@ -34,10 +34,10 @@ module.exports = function(grunt) {
     }
 
     ,watch: {
-      files: ['/**/*.less']
+      files: ['./**/*.less']
      ,tasks: ['serve']
      ,options: {
-        livereload: 3000
+        livereload: true
       }
     }
 

@@ -1,8 +1,9 @@
+# Possession
+
 global.less
-global.css
 _variables.less
+/test/global.css
 
-
-//  GruntJS Build System
+#  GruntJS Build System
 node_modules/
 npm-debug.log
