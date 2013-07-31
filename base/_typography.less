@@ -21,6 +21,10 @@ textarea {
   font-family: @body__font-family;
 }
 
+body {
+  font-size: @body__font-size;
+  line-height: @body__line-height;
+}
 
 //
 //  Hyperlinks
@@ -286,10 +290,17 @@ q:after {
 blockquote {
   font-weight: bold;
   color: @blockquote--color;
-  .p {
-    font-size: @blockquote--font-size;
-    line-height: @blockquote--line-height;
-  }
+
+    .p {
+      font-size: @blockquote--font-size;
+      line-height: @blockquote--line-height;
+    }
+
+    cite {
+      display: block;
+      color: @blockquote__cite--color;
+    }
+
 }
 
 cite {
@@ -297,10 +308,7 @@ cite {
   font-style: normal;
 }
 
-blockquote cite {
-  display: block;
-  color: @blockquote__cite--color;
-}
+
 
 @media print {
 
