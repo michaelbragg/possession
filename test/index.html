@@ -4,7 +4,23 @@
   <head>
 
     <title>Possession - Test Page</title>
+    <style>
+    .test__hidden {
+      display: block;
+      visibility: visible;
+    }
 
+    .test__visuallyhidden {
+      border: 1px solid blue;
+      clip: rect(0 0 0 0);
+      height: 25px;
+      margin: 0px;
+      overflow: hidden;
+      padding: 2px;
+      position: relative;
+      width: 50%;
+    }
+    </style>
       <link rel="stylesheet" media="screen" href="global.css">
 
   </head>
@@ -35,6 +51,23 @@
 
         <h3>Pre</h3>
         <pre>test</pre>
+
+      </article>
+
+      <article>
+
+        <h1>Core Tests</h1>
+        <p>To check that the core classes are working correctly.</p>
+
+        <h3>Hidden</h3>
+
+        <section class="test__hidden hidden">
+        <p>If all goes well this will be hidden from view.</p>
+        </section>
+
+        <h3>Visually Hidden</h3>
+
+        <a href="#" class="test__visuallyhidden visuallyhidden focusable">Visually Hidden</a>
 
       </article>
     </div><!--/ wrapper  -->
