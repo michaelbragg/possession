@@ -14,9 +14,11 @@ module.exports = function(grunt) {
 
     ,csslint: {
       options: {
-         "adjoining-classes": false
-        ,"box-sizing": false
-        ,"universal-selector": false
+         'adjoining-classes': false
+        ,'box-model': false
+        ,'box-sizing': false
+        ,'regex-selectors': false
+        ,'universal-selector': false
       }
       ,files: {
         src: ['test/global.css']
