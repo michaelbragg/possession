@@ -43,12 +43,15 @@ a:focus {
 //  people.opera.com/patrickl/experiments/keyboard/test
 //
 
-a:focus:hover,
+a:focus:hover {
+  outline: 0;
+  color: @color--hover;
+}
+
 a:focus:active {
   outline: 0;
   color: @color--interact;
 }
-
 
 a:link,
 a:visited,
